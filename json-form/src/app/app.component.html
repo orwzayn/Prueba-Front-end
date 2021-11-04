@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h2>Encuentra Tus Productos..</h2>
+  <p>Escriba algo en el campo de entrada para buscar Vendedor, Cliente o # pedido:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Vendedor</th>
+        <th>Cliente</th>
+        <th># Pedido</th>
+        <th>Articulo</th>
+        <th>Marca</th>
+        <th>Categoria</th>
+      </tr>
+    </thead> 
+  <tbody  id="myTable">
+    <tr *ngFor="let materiales of Materiales">
+      <th scope="row">{{materiales.SlpCode}}</th>
+      <td>{{materiales.CardCode}}</td>
+      <td>{{materiales.DocNum}}</td>
+      <td>{{materiales.ItemCode}}</td>
+      <td>{{materiales.FirmCode}}</td>
+      <td>{{materiales.CategoriaCode}}</td>
+    </tr>
+  </tbody>
+</table>
