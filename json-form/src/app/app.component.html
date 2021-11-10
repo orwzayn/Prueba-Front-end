@@ -1,27 +1,70 @@
-<div class="container mt-3">
-  <h2>Encuentra Tus Productos..</h2>
-  <p>Escriba algo en el campo de entrada para buscar Vendedor, Cliente o # pedido:</p>  
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
-  <br>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Vendedor</th>
-        <th>Cliente</th>
-        <th># Pedido</th>
-        <th>Articulo</th>
-        <th>Marca</th>
-        <th>Categoria</th>
-      </tr>
-    </thead> 
-  <tbody  id="myTable">
-    <tr *ngFor="let materiales of Materiales">
-      <th scope="row">{{materiales.SlpCode}}</th>
-      <td>{{materiales.CardCode}}</td>
-      <td>{{materiales.DocNum}}</td>
-      <td>{{materiales.ItemCode}}</td>
-      <td>{{materiales.FirmCode}}</td>
-      <td>{{materiales.CategoriaCode}}</td>
-    </tr>
-  </tbody>
-</table>
+<h1>Filtro de Seleccion</h1>
+
+<!--<div class="controls">
+  <button>Collepsed</button>
+  <button>Expanded</button>
+  <button>Checked All</button>
+  <button>Unchek All</button>
+</div>-->
+<ul class="tree">
+  <li class="has">
+    <input type="checkbox" name="domain[]" value="Codigo Vendedor">
+    <label>Vendedor <span class="total">(973)</span></label>
+    <ul>
+      <li *ngFor="let materiales of Materiales">
+        <input type="checkbox" name="subdomain[]" value="Vendedor">
+        <label># {{materiales.SlpCode}}</label>
+      </li>
+    </ul>
+  </li>
+  <li class="has">
+    <input type="checkbox" name="domain[]" value="Codigo Cliente">
+    <label>Cliente<span class="total">(973)</span></label>
+    <ul>
+      <li *ngFor="let materiales of Materiales">
+        <input type="checkbox" name="subdomain[]" value="Clientes">
+        <label>{{materiales.CardCode}}</label>
+      </li>
+    </ul>
+  </li>
+  <li class="has">
+    <input type="checkbox" name="domain[]" value="# Pedidos">
+    <label># Pedidos <span class="total">(973)</span></label>
+    <ul>
+      <li *ngFor="let materiales of Materiales">
+        <input type="checkbox" name="subdomain[]" value="Pedidos">
+        <label># {{materiales.DocNum}}</label>
+      </li>
+    </ul>
+  </li>
+  <li class="has">
+    <input type="checkbox" name="domain[]" value="Codigo Articulos ">
+    <label>Articulos <span class="total">(973)</span></label>
+    <ul>
+      <li *ngFor="let materiales of Materiales">
+        <input type="checkbox" name="subdomain[]" value="Articulos">
+        <label>{{materiales.ItemCode}}</label>
+      </li>
+    </ul>
+  </li>
+  <li class="has">
+    <input type="checkbox" name="domain[]" value="Codigo Marcas">
+    <label>Marcas <span class="total">(973)</span></label>
+    <ul>
+      <li *ngFor="let materiales of Materiales">
+        <input type="checkbox" name="subdomain[]" value="Marcas">
+        <label>{{materiales.FirmCode}}</label>
+      </li>
+    </ul>
+  </li>
+  <li class="has">
+    <input type="checkbox" name="domain[]" value="Codigo Categoria">
+    <label>Categoria <span class="total">(973)</span></label>
+    <ul>
+      <li *ngFor="let materiales of Materiales">
+        <input type="checkbox" name="subdomain[]" value="Categorias">
+        <label>{{materiales.CategoriaCode}}</label>
+      </li>
+    </ul>
+  </li>
+</ul>
