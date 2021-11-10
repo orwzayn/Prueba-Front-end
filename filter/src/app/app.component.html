@@ -1,0 +1,58 @@
+<div class="form-check form-switch">
+  <h2>Encuentra Tus Productos..</h2>
+  <p>Seleciona el dato que quieres ver :</p> 
+  <div class="filtros">
+  <!-- filtro de busqueda vendedor-->
+  <div class="form-check form-switch">
+    <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked >
+    <label class="form-check-label" for="flexSwitchCheckChecked">vendedor</label>
+  </div> 
+  <!-- filtro de busqueda Cliente-->
+    <div class="form-check form-switch">
+    <input class="form-check-input" id="checkNew" type="checkbox" checked >
+    <label class="form-check-label" for="flexSwitchCheckChecked">Cliente</label>
+  </div>
+   <!-- filtro de busqueda Pedido-->
+  <div class="form-check form-switch">
+    <input class="form-check-input" id="checkNew2" type="checkbox" checked >
+    <label class="form-check-label" for="flexSwitchCheckChecked">Pedido</label>
+  </div>
+     <!-- filtro de busqueda articulo-->
+     <div class="form-check form-switch">
+      <input class="form-check-input" id="checkNew3" type="checkbox" checked >
+      <label class="form-check-label" for="flexSwitchCheckChecked">Articulo</label>
+    </div>
+    <!-- filtro de busqueda marca-->
+    <div class="form-check form-switch">
+      <input class="form-check-input" id="checkNew4" type="checkbox" checked >
+      <label class="form-check-label" for="flexSwitchCheckChecked">Marca</label>
+    </div>
+    <!-- filtro de busqueda categoria-->
+    <div class="form-check form-switch">
+      <input class="form-check-input" id="checkNew5" type="checkbox" checked >
+      <label class="form-check-label" for="flexSwitchCheckChecked">Categoria</label>
+    </div>
+  </div>
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th id="col1" class="col1">Vendedor</th>
+        <th id="col2" class="col2">Cliente</th>
+        <th id="col3" class="col3"># Pedido</th>
+        <th id="col4" class="col4">Articulo</th>
+        <th id="col5" class="col5">Marca</th>
+        <th id="col6" class="col6">Categoria</th>
+      </tr>
+    </thead>
+  <tbody  id="myTable">
+    <tr *ngFor="let materiales of Materiales">
+      <li scope="row" id="vendedor" class="vendedor">{{materiales.SlpCode}}</li>
+      <td id="cliente" class="cliente">{{materiales.CardCode}}</td>
+      <td id="pedido"  class="pedido">{{materiales.DocNum}}</td>
+      <td id="articulo" class="articulo">{{materiales.ItemCode}}</td>
+      <td id="marca" class="marca">{{materiales.FirmCode}}</td>
+      <td id="categoria" class="categoria">{{materiales.CategoriaCode}}</td>
+    </tr>
+  </tbody>
+ </table>

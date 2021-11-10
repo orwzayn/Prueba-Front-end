@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JsonForm</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <meta http-equiv = "refresh" content = "19" />   
+  <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js" > </script> 
+</head>
+<script>
+// FILTRO VENDEDOR
+  $(document).ready(function(){
+		$("#flexSwitchCheckChecked").on( "click", function() {
+			$('#myTable tr').show(); //vendedor
+    $("#flexSwitchCheckChecked").on( "click", function() {
+      $('#vendedor, #col1').show(); 
+    });
+	});
+     
+		$("#flexSwitchCheckChecked").on( "click", function() {
+			$('.vendedor, .col1').hide(); //vendedor
+		});
+	});
+
+// FILTRO CLIENTE
+  $(document).ready(function(){
+		$("#checkNew").on( "click", function() {
+			$('#myTable tr').show(); //cliente
+    $("#checkNew").on( "click", function() {
+      $('#cliente, #col2').show(); 
+    });
+	});
+     
+		$("#checkNew").on( "click", function() {
+			$('.cliente, .col2').hide(); //cliente
+		});
+	});
+
+  // FILTRO PEDIDO
+  $(document).ready(function(){
+		$("#checkNew2").on( "click", function() {
+			$('#myTable tr').show(); //Pedido
+    $("#checkNew2").on( "click", function() {
+      $('#pedido, #col3').show(); 
+    });
+	});
+     
+		$("#checkNew2").on( "click", function() {
+			$('.pedido, .col3').hide(); //Pedido
+		});
+	});
+  // FILTRO ARTICULO
+  $(document).ready(function(){
+		$("#checkNew3").on( "click", function() {
+			$('#myTable tr').show(); //Articulo
+    $("#checkNew3").on( "click", function() {
+      $('#articulo, #col4').show(); 
+    });
+	});
+     
+		$("#checkNew3").on( "click", function() {
+			$('.articulo, .col4').hide(); //Articulo
+		});
+	});
+   // FILTRO MARCA
+   $(document).ready(function(){
+		$("#checkNew4").on( "click", function() {
+			$('#myTable tr').show(); //Marca
+    $("#checkNew4").on( "click", function() {
+      $('#marca, #col5').show(); 
+    });
+	});
+     
+		$("#checkNew4").on( "click", function() {
+			$('.marca, .col5').hide(); //Marca
+		});
+	});
+  // FILTRO CATEGORIA
+  $(document).ready(function(){
+		$("#checkNew5").on( "click", function() {
+			$('#myTable tr').show(); //Marca
+    $("#checkNew5").on( "click", function() {
+      $('#catgoria, #col6').show(); 
+    });
+	});
+     
+		$("#checkNew5").on( "click", function() {
+			$('.categoria, .col6').hide(); //Marca
+		});
+	});
+  </script>
+  <style>.filtros {
+    display: flex;}
+  </style>
+  <style>.form-check.form-switch {
+    padding-left: 46px;
+}</style>
+<body>
+  <app-root></app-root>
+</body>
+</html>
